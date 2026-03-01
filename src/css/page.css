@@ -57,6 +57,13 @@
     display: none;
 }
 
+.button-load {
+    width: 125px;
+    height: 40px;
+    margin-top: 15px;
+    
+}
+
 .gallery {
     display: flex;
     width: 1128px;

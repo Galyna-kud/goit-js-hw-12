@@ -4,6 +4,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 const ulCard = document.querySelector(".gallery");
 const loader = document.querySelector(".loader");
+const btnLoader = document.querySelector(".button-load")
 
 const lightBox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
@@ -30,7 +31,7 @@ function createMarkup(arr) {
 }
 
 export function createGallery(images) {
-    ulCard.innerHTML = createMarkup(images);
+    ulCard.insertAdjacentHTML("beforeend", createMarkup(images));
     lightBox.refresh();
 }
 
@@ -44,4 +45,12 @@ export function showLoader() {
 
 export function hideLoader() {
     loader.classList.add("hidden");
+}
+
+export function showLoadMoreButton() {
+    btnLoader.classList.remove("hidden");
+}
+
+export function hideLoadMoreButton() {
+    btnLoader.classList.add("hidden");
 }
