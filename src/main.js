@@ -103,7 +103,6 @@ async function onLoadMore() {
     } finally {
         hideLoader();
     }
-
 }
 
 function scrollSmooth() {
